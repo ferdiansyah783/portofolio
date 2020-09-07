@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+    <title>jQuery</title>
+    <style>
+        .header{
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">bondowoso</div>
+
+    <button id="show">tampil</button>
+    <button id="hide">off</button>
+
+    <!-- gambar -->
+    <div id="gambar">
+        <img src="asset/css/images/tokyo-ghoul.jpg" alt="" id="load-gambar" width="500">
+    </div>
+    
+    <!-- optional jQuery -->
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/jquery.351.full.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/popper.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $(".header").html('<p>bondowoso</p>');
+            $(".header").click(function(){
+                $('.header').css({"border":"1px solid green"});
+            })
+        });
+
+        // efek animasi
+        $('#load-gambar').hide();
+
+        $("#show").click(function(){
+            $('#load-gambar').fadeIn();
+        })
+
+        $("#hide").click(function(){
+            $('#load-gambar').fadeOut(5000);
+        })
+
+
+    </script>
+</body>
+</html>
